@@ -8,7 +8,7 @@ d1 = str(today.strftime("%Y/%m/%d"))
 # d1 = "myschoolio@gmail.com"
 cursor = connection.cursor()
 # cursor.execute("select*from orderdetails ")
-cursor.execute("select*from orderdetails where date(date_time) = '"+d1+"' ")
+cursor.execute("select*from logindetails")
 r = cursor.fetchall()
 cursor.close()
 for i in r:
