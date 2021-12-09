@@ -109,7 +109,7 @@ body {
 
 
 .box{
-    margin: 1rem 2rem;
+    margin: 1rem 0rem;
     width: 100%;
 }
 
@@ -189,6 +189,10 @@ body {
     .container{
         position: absolute;
         height: 65%;
+    }
+    .box{
+      margin: 1rem 0rem;
+      width: 100%;
     }
     .box input{
         width: 33%;
