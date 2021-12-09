@@ -109,7 +109,7 @@ body {
 
 
 .box{
-    margin: 1rem 0rem;
+    margin: 1rem 0.5rem;
     width: 100%;
 }
 
@@ -137,7 +137,7 @@ body {
     outline: none;
     width: 30%;
     margin-top: 1rem;
-    margin-left: 14rem;
+    margin-left: 11rem;
     padding: 0.5rem;
 }
 
@@ -147,7 +147,7 @@ body {
     border-radius: 2rem;
     border: 2px solid black;
     outline: none;
-    width: 15%;
+    width: 25%;
     margin-top: 1rem;
     margin-left: 4rem;
     padding: 0.5rem;
@@ -166,7 +166,7 @@ body {
 
 .text{
     color: black;
-    margin-left: 13rem;
+    margin-left: 9rem;
     margin-top: 2rem;
 }
 
@@ -201,10 +201,23 @@ body {
     .btn{
         width: 30%;
         margin-top: 1rem;
-        margin-left: 10rem;
+        margin-left: 6.5rem;
         padding: 0.5rem;
     }
     .container .text{
-        margin-left: 8rem;
+        margin-left: 3rem;
     }
+    .btn1{
+      background-color: whitesmoke;
+      cursor: pointer;
+      border-radius: 2rem;
+      border: 2px solid black;
+      outline: none;
+      width: 25%;
+      margin-top: 1rem;
+      margin-left: 4rem;
+      padding: 0.5rem;
+      position: absolute;
+    }
+  
 }
