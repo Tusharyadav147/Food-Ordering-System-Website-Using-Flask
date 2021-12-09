@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="./static/themes/logo/admin.png" type="image/x-icon">
+	<title>Admin Only</title>
+	<link rel="stylesheet" type="text/css" href="./static/additem.css">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+</head>
+<body>
+	<div class="container">
+		<div class="contact-box">
+			<div class="left"></div>
+			<div class="right">
+				<h2>Add Items</h2>
+				<form action="http://localhost:5000/uploader" enctype="multipart/form-data" method="POST">
+					<input type="file" name="file" class="field">
+					<input type="name" name="name" class="field" placeholder="Food name">
+					<input type="price" name="price" class="field" placeholder="Price">
+					<textarea placeholder="Message" class="field"></textarea>
+					<button class="btn">+ Add</button>
+					<hr>
+				</form>
+				<a href="http://127.0.0.1:5000/admin"><button class="btn">Back</button></a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

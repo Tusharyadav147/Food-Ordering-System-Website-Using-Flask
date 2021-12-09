@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/order.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <script src="https://kit.fontawesome.com/37ca218f1d.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./static/themes/logo/pngegg.png" type="image/x-icon">
+    <title>Order Now</title>
+</head>
+<body>
+    {% if error != 0 %}
+      <div id="alert" class="alert show showAlert">
+         <span class="fas fa-exclamation-circle"></span>
+         <span class="msg">{{error}}</span>
+         <div class="close-btn" id= "close-btn">
+            <span class="fas fa-times"></span>
+         </div>
+      </div>
+    {%endif%}
+    <!-- Navbar Section -->
+    <header>
+        <a href="/welcome" class="logo">
+            <i class="fas fa-utensils"></i>
+            Foody
+        </a>
+        <nav class="navbar">
+            <a href ="http://127.0.0.1:5000/welcome" id="home-nav" href="">Home</a>
+            <a href="#order" id="order-nav" class="active">Order</a>
+            <a href="http://127.0.0.1:5000/" >Log Out</a>
+        </nav>
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bar"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook"></a>
+            <a href="https://www.instagram.com/accounts/login/" target="_blank" class="fa fa-instagram"></a>
+            <a href="https://twitter.com/?lang=en" target="_blank" class="fa fa-twitter"></a>
+        </div>
+    </header>
+    <!-- Navbar Section -->
+
+    <!-- Search bar -->
+    <form action="" id="search-form">
+        <input type="search" placeholder="Search here....." name = "" id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close"></i>
+    </form>
+    <!-- Search Bar -->
+
+
+<!-- order section starts  -->
+<section class="order" id="order">
+    <h1 class="heading"> Order Now </h1>
+    <form action="http://127.0.0.1:5000/orderresult" method="POST">
+        <div class="inputBox">
+            <div class="input">
+                <span>Your Name</span>
+                <input type="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="input">
+                <span>Your Number</span>
+                <input type="mob_number" name="mob_number" placeholder="Enter your number" required>
+            </div>
+        </div>
+        <div class="inputBox">
+            <div class="input">
+                <span>Email Id</span>
+                <input type="email" id="email" class="email" name="email" placeholder="Enter your email">
+            </div>
+            <div class="input">
+                <span>Food Type</span>
+                <select class="food-type" id="food-type" name="food-type" required>
+                    <option value="#">Select Food Type</option>
+                    <option value="pizza">Pizza</option>
+                    <option value="fast-food">Fast Food</option>
+                    <option value="special">Special</option>
+                    <option value="sweets">Sweets</option>
+                    <option value="juices">Juices</option>
+                    <option value="soft-drinks">Soft Drinks</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+        </div>
+        <div class="inputBox">
+            <div class="input">
+                <span>Food Name</span>
+                <select class="empty" id="empty">
+                    <option value=""></option>
+                </select>
+                <select class="pizza-type" id="pizza-type" name="food_name1" required>
+                    <option value="#">Select Pizza</option>
+                    <option value="hot-pizza">Hot Pizza</option>
+                    <option value="farm-house-pizza">Farm House Pizza</option>
+                    <option value="max-italian-pizza">Max Italian Pizza</option>
+                    <option value="daily-pizza">Daily Pizza</option>
+                </select>
+                <select class="special-type" id="special-type" name="food_name2" required>
+                    <option value="#">Select Special Food</option>
+                    <option value="matar-masala">Matar Masala</option>
+                    <option value="aloo-aratha">Aloo Paratha</option>
+                    <option value="butter-naan">Butter Naan</option>
+                    <option value="chole-panner">Chole Panner</option>
+                    <option value="chole-bhature">Chole Bhature</option>
+                    <option value="dal-fry-marathi">Dal Fry Marathi</option>
+                    <option value="dal-makhani">Dal Makhani</option>
+                    <option value="kadai-panner">Kadai Panner</option>
+                    <option value="kaju-mutter-masala">Kaju Mutter Masala</option>
+                    <option value="kofte">Kofte</option>
+                    <option value="puri-special">Puri Special</option>
+                    <option value="sahi-panner">Sahi Panner</option>
+                    <option value="special-thali">Special Thali</option>
+                    <option value="stuffed-naan">Stuffed Naan</option>
+                    <option value="tawa-roti">Tawa Roti</option>
+                </select>
+                <select id="sweets-type" name="food_name3" class="sweets-type">
+                    <option value="#">Select Sweet </option>
+                    <option value="gulab-jamun">Gulab Jamun</option>
+                    <option value="rabri">Rabri</option>
+                    <option value="kheer">Kheer</option>
+                    <option value="laddu">Laddu</option>
+                    <option value="soan-sohan">Soan Sohan</option>
+                    <option value="sohan-halwa">Sohan Halwa</option>
+                    <option value="ras-malai">Ras Malai</option>
+                </select>
+                <select id="soft-drinks-type" name="food_name4" class="soft-drinks-type">
+                    <option value="#">Select Drink</option>
+                    <option value="7-up">7 Up</option>
+                    <option value="coco-cola">Coco Cola</option>
+                    <option value="crush-pineapple">Crush Pineapple</option>
+                    <option value="fanta">Fanta</option>
+                    <option value="frooti">Frooti</option>
+                    <option value="maaza">Maaza</option>
+                    <option value="pepsi">Pepsi</option>
+                    <option value="mountain-dew">Mountain Dew</option>
+                    <option value="mirinda">Mirinda</option>
+                </select>
+                <select id="juice-type" name="food_name5" class="juice-type">
+                    <option value="#">Select Juice</option>
+                    <option value="blue-curacao">Blue Curacao</option>
+                    <option value="blue-lagoon">Blue Lagoon</option>
+                    <option value="raspberry-mojito">Rasberry Mojito</option>
+                    <option value="crazy-milkshake">Crazy Milkshake</option>
+                    <option value="kiwi-shake">Kiwi Shake</option>
+                    <option value="mint-mojito">Mint Mojito</option>
+                    <option value="nuts-and-candy-milkshake">Nuts And Candy Milkshake</option>
+                    <option value="pebblesgoza">Pebblesgoza</option>
+                </select>
+            </div>
+            <div class="input">
+                <span>Quantities</span>
+                <input type="number" id="number" min="1" max="15" name="number" value = 0 placeholder="Quantities" required>
+            </div>
+        </div>
+        <div class="inputBox">
+            <div class="input">
+                <span>Amount</span>
+                <input type="amount" name="amount" id="amount" class="amount">
+            </div>
+            <div class="input">
+                <span>Additional Food</span>
+                <input type="extra_food"  name="extra_food" placeholder="Extra with food">
+            </div>
+        </div>
+        <div class="inputBox">
+            <div class="input">
+                <span>Your Address</span>
+                <input type="address" name="address" placeholder="Enter your address" >
+            </div>
+            <div class="input">
+                <span>City</span>
+                <input type="city" name="city" placeholder="Enter your city" >
+            </div>
+        </div>
+        <div class="inputBox">
+            <div class="input">
+                <span>Date and Time</span>
+                <input type="datetime-local" name="datetime-local">
+            </div>
+            <div class="input">
+                <span>Your Message</span>
+                <textarea name="" placeholder="enter your message" id="" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <button class="btn">Order Now</button>
+    </form>
+</section>
+<!-- order section ends -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="./static/first.js"></script>
+</body>
+</html>

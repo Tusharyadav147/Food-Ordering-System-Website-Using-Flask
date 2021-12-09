@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/table.css">
+    <link rel="icon" href="./static/themes/logo/admin.png" type="image/x-icon">
+    <title>Report</title>
+</head>
+<body>
+    <header>
+        <h1>Day Report</h1>
+        <a href="http://127.0.0.1:5000/admin">Back</a>
+        <hr>
+    </header>
+    <div class="table">
+    <table>
+        <tr id="header">
+            <th>S.No.</th>
+            <th>Customer Name</th>
+            <th>Number</th>
+            <th>Email Id</th>
+            <th>Food_type</th>
+            <th>Food_name</th>
+            <th>Quantity</th>
+            <th>Amount</th>
+            <th>Extra_food</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Date & Time</th>
+        </tr>
+        {% for row in value %}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+                <td>{{row[4]}}</td>
+                <td>{{row[5]}}</td>
+                <td>{{row[6]}}</td>
+                <td>{{row[7]}}</td>
+                <td>{{row[8]}}</td>
+                <td>{{row[9]}}</td>
+                <td>{{row[10]}}</td>
+                <td>{{row[11]}}</td>
+            </tr>
+        {% endfor %}  
+    </table>
+    </div>
+    <div class="total_amount">Total Earn:-₹{{amount}}</div>
+</body>
+
+</html>

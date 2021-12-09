@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./static/themes/logo/pngegg.png" type="image/x-icon">
+    <title>Welcome Foodies</title>
+    <script src="https://kit.fontawesome.com/37ca218f1d.js" crossorigin="anonymous"></script>
+    <script src="./static/login.js"></script>
+    <link rel="stylesheet" href="./static/login.css">
+</head>
+
+<body>
+    {% if error != 0 %}
+      <div id="alert" class="alert show showAlert">
+         <span class="fas fa-exclamation-circle"></span>
+         <span class="msg">{{error}}</span>
+         <div onclick="fun3()" class="close-btn">
+            <span class="fas fa-times"></span>
+         </div>
+      </div>
+    {%endif%}
+    <div class="container">
+        <a onclick="fun2()" href="#" id="user">User</a>
+        <a onclick="fun1()" href="#" class="admin" id="admin">Admin</a>
+        <form id="user_form" class="user_form" action="", method="POST">
+            {{form.hidden_tag()}}
+            <div class="box">
+                <i class="fas fa-user-tie"></i>
+                {{form.email( class = "email", placeholder = "Email")}}
+<!--                <input type="email" name="email" id="email" placeholder="User Id" required>-->
+            </div>
+            <div class="box">
+                <i class="fas fa-key"></i>
+                {{form.password( class = "password", placeholder = "Password")}}
+<!--                <input type="password" name="password" id="password" placeholder="Password" required>-->
+            </div>
+                {{form.submit( class = "btn")}}
+<!--            <button class="btn">Log In</button>-->
+        </form>
+        <form id="admin_form" class="admin_form" action="", method="POST">
+            {{form.hidden_tag()}}
+            <div class="box">
+                <i class="fas fa-user-tie"></i>
+                 {{form.email( class = "email", placeholder = "Admin ID")}}
+<!--                <input type="email" name="email" id="email" placeholder="Admin Id" required>-->
+            </div>
+            <div class="box">
+                <i class="fas fa-key"></i>
+                {{form.password( class = "password", placeholder = "Smart Key")}}
+<!--                <input type="password" name="password" id="password" placeholder="Smart Key" required>-->
+            </div>
+                {{form.submit( class = "btn")}}
+<!--            <button class="btn">Log In</button>-->
+        </form>
+        <form method="get" action="/register">
+            <button id="btn1" class="btn1">Register</button>
+        </form>
+    </div>
+</body>
+<script src="./static/jquery.js"></script>
+</html>

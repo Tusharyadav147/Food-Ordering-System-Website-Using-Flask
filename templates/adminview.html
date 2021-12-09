@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./static/themes/logo/admin.png" type="image/x-icon">
+    <title>Admin Only</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="./static/adminview.css">
+
+</head>
+<body>
+    {% if error != 0 %}
+      <div id="alert" class="alert show showAlert">
+         <span class="fas fa-exclamation-circle"></span>
+         <span class="msg">{{error}}</span>
+         <div onclick="fun3()" class="close-btn">
+            <span class="fas fa-times"></span>
+         </div>
+      </div>
+    {%endif%}
+
+<!-- header section starts  -->
+
+<div class="header" id="header">
+
+    <div class="user">
+        <img src="./static/themes/admin/admin photo.jpg" alt="">
+        <h2 class="name">Mr. Thomas</h2>
+        
+    </div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home" onclick="fun0()">home</a></li>
+            <li><a href="http://127.0.0.1:5000/welcome">Website</a></li>
+            <li><a href="http://127.0.0.1:5000/additem">Add items</a></li>
+            <li><a href="#about" onclick="fun3()">about</a></li>
+            <li><a href="#education" onclick="fun2()">Users Details</a></li>
+            <li><a href="#contact" onclick="fun1()">Daily Report</a></li>
+            <li><a href="#Feedbacks" onclick="fun4()">Feedbacks Report</a></li>
+            <li><a href="http://127.0.0.1:5000/">Log Out</a></li>
+        </ul>
+    </nav>
+
+</div>
+
+<!-- header section ends -->
+
+<div id="menu" class="fas fa-bars"></div>
+
+<!-- home section starts  -->
+<section id="home" class="home">
+    <div class="main__container">
+        <!-- MAIN TITLE STARTS HERE -->
+
+        <div class="main__title">
+          <img src="assets/hello.svg" alt="" />
+          <div class="main__greeting">
+            <h1 class="heading"> <span>Welcome</span>Admin</h1>
+          </div>
+        </div>
+
+        <!-- MAIN TITLE ENDS HERE -->
+
+        <!-- CHARTS STARTS HERE -->
+        <div class="charts">
+          <div class="charts__left">
+            <div class="charts__left__title">
+              <div>
+                <h1 class="heading"> <span>Daily</span>Reports</h1>
+              </div>
+              <i class="fa fa-usd" aria-hidden="true"></i>
+            </div>
+            <div id="apex1" class="apex1">
+                <table class="content-table" >
+                    <thead>
+                    <tr>
+                        <th>S.No.</th>
+                        <th>Customer Name</th>
+                        <th>Food_type</th>
+                        <th>Food_name</th>
+                        <th>Amount</th>
+                        <th>City</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in value.dailyreport() %}
+                            <tr>
+                                <td>{{row[0]}}</td>
+                                <td>{{row[1]}}</td>
+                                <td>{{row[4]}}</td>
+                                <td>{{row[5]}}</td>
+                                <td>{{row[7]}}</td>
+                                <td>{{row[10]}}</td>
+                            </tr>
+                        {% endfor %}      
+                    </tbody>
+                </table>
+            </div>
+          </div>
+
+          <div class="charts__right">
+            <div class="charts__right__title">
+              <div>
+                <h1 class="heading"> <span>Stats</span>Report</h1>
+              </div>
+              <i class="fa fa-usd" aria-hidden="true"></i>
+            </div>
+            <div class="charts__right__cards">
+              <div class="card">
+                <h1>Earn</h1>
+                <p>₹{{total_amount}}</p>
+              </div>
+
+              <div class="card">
+                <h1>Today's Earning</h1>
+                <p>₹{{today_amount}}</p>
+              </div>
+
+              <div class="card">
+                <h1>Users</h1>
+                <p>{{total_login}}</p>
+              </div>
+
+              <div class="card">
+                <h1>Orders</h1>
+                <p>{{total_order}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- CHARTS ENDS HERE -->
+      </div>
+
+</section>
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section id="about" class="about">
+    <h1 class="heading"> <span>about</span> me </h1>
+
+    <div class="row">
+
+        <div class="info">
+            <h3> <span> name : </span>Mr. Thomas</h3>
+            <h3> <span> age : </span> 45</h3>
+            <h3> <span> qualification : </span> MSC</h3>
+
+            <h3> <span> language : </span>English, Hindi</h3>
+        </div>
+
+        <div class="counter">
+
+            <div class="box">
+                <h3>Total Earn</h3>
+                <h3>50</h3>
+            </div>
+
+            <div class="box">
+                <h3>Total Order</h3>
+                <h3>230</h3>
+            </div>
+
+            <div class="box">
+                <h3>Total Users</h3>
+                <h3>34</h3>
+            </div>
+
+            <div class="box">
+                <h3>Best Service</h3>
+                <h3>65</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- login table section starts  -->
+<section class="login_table" id="login_table">
+    <div class="table">
+        <table class="content-table">
+            <thead>
+              <tr>
+                <th>S.No.</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Mobile Number</th>
+                <th>Password</th>
+                <th>Confirm Password</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for row in value.logindetails() %}
+                    <tr>
+                        <td>{{row[0]}}</td>
+                        <td>{{row[1]}}</td>
+                        <td>{{row[2]}}</td>
+                        <td>{{row[3]}}</td>
+                        <td>{{row[4]}}</td>
+                        <td>{{row[5]}}</td>
+                        <td>{{row[6]}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+<!-- education section ends -->
+
+
+<!-- daily report section starts  -->
+<section class="daily-report" id="daily-report">
+    <div class="filter-date">
+        <form action="http://127.0.0.1:5000/table" method="POST">
+            <input type="date" name="search">
+            <button type="submit" class="btn"> Filter<i class="fas fa-download"></i></button>
+        </form>
+    </div>
+    <div class="table1">
+        <table class="content-table" >
+            <thead>
+            <tr>
+                <th>S.No.</th>
+                <th>Customer Name</th>
+                <th>Number</th>
+                <th>Email Id</th>
+                <th>Food_type</th>
+                <th>Food_name</th>
+                <th>Quantity</th>
+                <th>Amount</th>
+                <th>Extra_food</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Date & Time</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for row in value.orderdetails() %}
+                    <tr>
+                        <td>{{row[0]}}</td>
+                        <td>{{row[1]}}</td>
+                        <td>{{row[2]}}</td>
+                        <td>{{row[3]}}</td>
+                        <td>{{row[4]}}</td>
+                        <td>{{row[5]}}</td>
+                        <td>{{row[6]}}</td>
+                        <td>{{row[7]}}</td>
+                        <td>{{row[8]}}</td>
+                        <td>{{row[9]}}</td>
+                        <td>{{row[10]}}</td>
+                        <td>{{row[11]}}</td>
+
+                    </tr>
+                {% endfor %}      
+            </tbody>
+        </table>
+    </div>
+    <div class="table2">
+        <table class="content-table" >
+            <thead>
+            <tr>
+                <th>Customer Name</th>
+                <th>Number</th>
+                <th>Food_type</th>
+                <th>Food_name</th>
+                <th>Extra_food</th>
+                <th>Quantity</th>
+                <th>Date & Time</th>
+                <th>Address</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for row in value.orderdetails() %}
+                    <tr>
+                        <td>{{row[0]}}</td>
+                        <td>{{row[1]}}</td>
+                        <td>{{row[2]}}</td>
+                        <td>{{row[3]}}</td>
+                        <td>{{row[4]}}</td>
+                        <td>{{row[5]}}</td>
+                        <td>{{row[6]}}</td>
+                        <td>{{row[7]}}</td>
+                    </tr>
+                {% endfor %}      
+            </tbody>
+        </table>
+    </div>
+    <hr>
+    
+</section>
+<!-- contact section ends -->
+
+<!-- feedback Section start -->
+<section class="feedback-table" id="feedback-table">
+    <div class="table">
+        <table class="content-table">
+            <thead>
+              <tr>
+                <th>S.No.</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Subject</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for row in value.feedbackdetails() %}
+                    <tr>
+                        <td>{{row[0]}}</td>
+                        <td>{{row[1]}}</td>
+                        <td>{{row[2]}}</td>
+                        <td>{{row[3]}}</td>
+                        <td>{{row[4]}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+<!-- feedback section end -->
+
+<!-- scroll top button  -->
+
+<a href="#home" class="top">
+    <img src="images/scroll-top-img.png" alt="">
+</a>
+
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="./static/adminview.js"></script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+body {
+    background: url("./themes/login1.jpeg") no-repeat center fixed;
+    background-size: 100% 100%;
+}
+.alert{
+  background: #ffdb9b;
+  padding: 20px 40px;
+  min-width: 420px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  border-radius: 4px;
+  border-left: 8px solid #ffa502;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.alert.showAlert{
+  opacity: 1;
+  pointer-events: auto;
+}
+.alert.show{
+  animation: show_slide 1s ease forwards;
+}
+@keyframes show_slide {
+  0%{
+    transform: translateX(100%);
+  }
+  40%{
+    transform: translateX(-10%);
+  }
+  80%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-10px);
+  }
+}
+.alert.hide{
+  display: none;
+  animation: hide_slide 1s ease forwards;
+}
+@keyframes hide_slide {
+  0%{
+    transform: translateX(-10px);
+  }
+  40%{
+    transform: translateX(0%);
+  }
+  80%{
+    transform: translateX(-10%);
+  }
+  100%{
+    transform: translateX(100%);
+  }
+}
+.alert .fa-exclamation-circle{
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ce8500;
+  font-size: 30px;
+}
+.alert .msg{
+  padding: 0 20px;
+  font-size: 18px;
+  color: #ce8500;
+}
+.alert .close-btn{
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffd080;
+  padding: 20px 18px;
+  cursor: pointer;
+}
+.alert .close-btn:hover{
+  background: #ffc766;
+}
+.alert .close-btn .fas{
+  color: #ce8500;
+  font-size: 22px;
+  line-height: 40px;
+}
+.container{
+    color: white;
+    position: fixed;
+    align-items: center;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.671);
+    height: 40%;
+    width: 30%;
+    top: 30%;
+    left: 30%;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    border-radius: 2rem;
+}
+
+.container a{
+    display: inline-block;
+    font-size: 40px;
+    margin-bottom: 1rem ;
+    border-bottom: 5px solid purple;
+    text-decoration: none;
+    color: white;
+    margin-left: 2rem;
+}
+
+.container a:hover{
+    color: brown;
+}
+
+.container .admin{
+    margin-left: 10rem;
+    border-bottom: none;
+}
+.user_form{
+    display: block;
+}
+.admin_form{
+    display: none;
+}
+.box{
+    margin-top: 2.5rem;
+    width: 100%;
+    border-bottom: 2px solid purple;
+}
+
+.box input{
+    background: none;
+    width: 81%;
+    border: none;
+    font-size: 18px;
+    color: whitesmoke;
+}
+
+.box input:hover{
+    background-color: white;
+    color: black;
+}
+
+.box i{
+    margin-top: 1rem;
+    text-align: center;
+    padding: 0px 12px;
+    font-size: 2rem;
+}
+
+.btn{
+    cursor: pointer;
+    border-radius: 2rem;
+    border: 2px solid black;
+    outline: none;
+    width: 20%;
+    margin-top: 2rem;
+    padding: .5rem;
+    position: absolute;
+}
+
+.btn1{
+    cursor: pointer;
+    border-radius: 2rem;
+    border: 2px solid black;
+    outline: none;
+    width: 25%;
+    margin-left: 14rem;
+    padding: .5rem;
+    margin-top: 2rem;
+    position: absolute;
+    display: block;
+}
+
+.btn1:hover{
+    background-color: rgb(206, 229, 250);
+}
+.btn:hover{
+    background-color: rgb(206, 229, 250);
+}
+@media(max-width:991px){
+    html{
+        font-size: 65%;
+    }
+    .container{
+        top:30%;
+        left: 36%;
+        height: 40%;
+        width: 35%;
+    }
+    .container a{
+        font-size: 30px;
+        margin-bottom: 1rem ;
+        margin-left: 1rem;
+    }
+    .btn1{
+        margin-left: 14rem;
+    }
+    .btn, .btn1{
+        width: 30%;
+    }
+}
+
+@media(max-width:768px){
+    html{
+        font-size: 60%;
+    }
+    .container{
+        top:30%;
+        left: 26%;
+        height: 40%;
+        width: 45%;
+    }
+    .btn1{
+        margin-left: 14rem;
+    }
+    .btn, .btn1{
+        width: 30%;
+    }
+}
+@media (max-width:550px){
+    html{
+        font-size: 55%;
+    }
+    .container{
+        top:30%;
+        left: 16%;
+        height: 35%;
+        width: 55%;
+    }
+    .container a{
+        font-size: 25px;
+        margin-bottom: 1rem ;
+        margin-left: 1rem;
+    }
+    .btn1{
+        margin-left: 14rem;
+    }
+    .btn, .btn1{
+        width: 30%;
+    }
+}

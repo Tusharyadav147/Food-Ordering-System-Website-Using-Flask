@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Registration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="./static/register.css">
+    
+</head>
+<body>
+    {% if error != 0 %}
+      <div class="alert show showAlert">
+         <span class="fas fa-exclamation-circle"></span>
+         <span class="msg">{{error}}</span>
+         <div class="close-btn">
+            <span class="fas fa-times"></span>
+         </div>
+      </div>
+    {%endif%}
+    <div>
+        <div class="container">
+            <h1>Register Here</h1>
+            <form action="" method="POST">
+                {{form.hidden_tag()}}
+                <div class="box">
+                    {{form.first_name( class = "input is-invalid", placeholder = "First Name")}}
+<!--                    <input type="Firstname" name="Firstname", placeholder="Firstname">-->
+                    {{form.last_name( class = "input", placeholder = "Last Name")}}
+<!--                    <input type="Lastname" name="Lastname" placeholder="Lastname">-->
+                </div>
+                <div class="box">
+                    {{form.email( class = "input", placeholder = "Email")}}
+<!--                    <input type="email", name="email", placeholder="Email">-->
+                    {{form.mobile_number( class = "input", placeholder = "Mobile Number")}}
+<!--                    <input type="mobile number", name="mobile number", placeholder="Mobile Number">-->
+                </div>
+                <div class="box">
+                    {{form.password( class = "input", placeholder = "Password")}}
+<!--                    <input type="password" name="password" placeholder="Password">-->
+                    {{form.confirm_password( class = "input", placeholder = "Confirm Password")}}
+<!--                    <input type="password", name="confirmpassword", placeholder="Confirm Password">-->
+                </div>
+                {{form.submit( class = "btn")}}
+<!--                <button class="btn">Sign In</button>-->
+            </form>
+            <form action="http://127.0.0.1:5000/", method="GET">
+                <div class="text">
+                    <h2>Already Have Account</h2>
+                    <button class="btn1">Log In</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+         $('.close-btn').click(function(){
+           $('.alert').removeClass("show");
+           $('.alert').removeClass("showAlert");
+           $('.alert').addClass("hide");
+         });
+      </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="product" transform="translate(-4.5 -4.5)">
+    <path id="Path_132" data-name="Path 132" d="M9,20.25h6.75V22.5H9Z" transform="translate(1.111 3.182)" fill="#fff"/>
+    <path id="Path_133" data-name="Path 133" d="M9,24.75H20.25V27H9Z" transform="translate(1.429 4.091)" fill="#fff"/>
+    <path id="Path_134" data-name="Path 134" d="M33.833,4.5H7.167A2.669,2.669,0,0,0,4.5,7.167V33.833A2.669,2.669,0,0,0,7.167,36.5H33.833A2.669,2.669,0,0,0,36.5,33.833V7.167A2.669,2.669,0,0,0,33.833,4.5ZM23.167,7.167V12.5H17.833V7.167Zm-16,26.667V7.167h8v8H25.833v-8h8V33.833Z" transform="translate(0 0)" fill="#fff"/>
+  </g>
+</svg>
