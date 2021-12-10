@@ -57,9 +57,9 @@ class report:
         return result
     def dailyreport(self):
         today = date.today()
-        d1 = today.strftime("%Y-%m-%d")
+        d1 = today.strftime("%Y/%m/%d")
         cursor = connection.cursor()
-        cursor.execute("select*from orderdetails where DATE(date_time)= '"+d1+"' ")
+        cursor.execute("select*from orderdetails where date(date_time)= '"+d1+"' ")
         r = cursor.fetchall()
         cursor.close()
         return r
@@ -71,7 +71,7 @@ class image:
         return "img upload successfully"
 
     def upload(self):
-        path = 'E:\\Tushar File\\Tushar Programs\\Project Work\\DS Project\\static\\themes\\newupload\\'
+        path = 'E:\\Tushar File\\Tushar Programs\\DS Project\\static\\themes\\newupload\\'
         uploads = sorted(os.listdir(path), key=lambda x: os.path.getctime(path+x))        # Sorting as per image upload date and time
         #uploads = os.listdir('static/uploads')
         uploads = ['themes/newupload/' + file for file in uploads]
@@ -146,7 +146,34 @@ def login():
             cursor.close()
             if count == 1:
                 return render_template('first.html', value = image())
-            elif email == "admin147@foody.com" and password == "Admin4u$":
+            else:
+                Error = "Wrong Id & Password"
+                return render_template("login.html", error = Error, form = LoginForm())
+        elif not form.validate_on_submit():
+            return render_template("login.html", error=0, form = LoginForm())
+    except Exception as e:
+        print(e)
+        Error = "Database is not connected"
+        return render_template("login.html", error=Error, form = LoginForm())
+
+@app.route("/adminlogin" , methods = ['POST', 'GET'])
+def adminlogin():
+    try:
+        form = LoginForm()
+        if len(form.password.errors) > 0:
+            for i in form.password.errors:
+                return render_template("login.html", error=i, form=LoginForm())
+        if len(form.email.errors) > 0:
+            for i in form.email.errors:
+                return render_template("login.html", error=i, form=LoginForm())
+        print(form.email.errors)
+        print(form.password.errors)
+        if form.validate_on_submit():
+            email = form.email.data
+            password = form.password.data
+            print(email)
+            print(password)
+            if email == "admin147@foody.com" and password == "Admin4u$":
                 print("Enter")
                 value  = report()
                 amount = 0
@@ -174,7 +201,7 @@ def login():
         print(e)
         Error = "Database is not connected"
         return render_template("login.html", error=Error, form = LoginForm())
-
+        
 #this is for registration page
 @app.route("/register", methods = ["POST", "GET"])
 def register():
@@ -339,7 +366,7 @@ def table():
         return render_template('adminview.html', value=report(), error = Error)
 
 
-app.config['UPLOAD_FOLDER'] = "E:\\Tushar File\\Tushar Programs\\Project Work\\DS Project\\static\\themes\\newupload"
+app.config['UPLOAD_FOLDER'] = "E:\\Tushar File\\Tushar Programs\\DS Project\\static\\themes\\newupload"
 
 @app.route("/uploader",methods=['GET','POST'])
 def uploader():                                       # This method is used to upload files 
