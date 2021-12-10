@@ -71,7 +71,7 @@ class image:
         return "img upload successfully"
 
     def upload(self):
-        path = 'E:\\Tushar File\\Tushar Programs\\Project Work\\DS Project\\static\\themes\\newupload'
+        path = 'E:\\Tushar File\\Tushar Programs\\Project Work\\DS Project\\static\\themes\\newupload\\'
         uploads = sorted(os.listdir(path), key=lambda x: os.path.getctime(path+x))        # Sorting as per image upload date and time
         #uploads = os.listdir('static/uploads')
         uploads = ['themes/newupload/' + file for file in uploads]

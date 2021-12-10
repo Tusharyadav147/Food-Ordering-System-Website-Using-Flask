@@ -156,12 +156,10 @@ body {
 
 .btn1:hover{
     background-color: rgb(206, 229, 250);
-
 }
 
 .btn:hover{
     background-color: rgb(206, 229, 250);
-
 }
 
 .text{
@@ -219,5 +217,4 @@ body {
       padding: 0.5rem;
       position: absolute;
     }
-  
 }
