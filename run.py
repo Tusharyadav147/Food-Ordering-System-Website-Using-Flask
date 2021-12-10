@@ -73,6 +73,7 @@ class image:
     def upload(self):
         path = '.\static\themes\newupload'
         uploads = sorted(os.listdir(path), key=lambda x: os.path.getctime(path+x))        # Sorting as per image upload date and time
+        print(uploads)
         #uploads = os.listdir('static/uploads')
         uploads = ['themes/newupload/' + file for file in uploads]
         uploads.reverse()
