@@ -366,7 +366,7 @@ def table():
         return render_template('adminview.html', value=report(), error = Error)
 
 
-app.config['UPLOAD_FOLDER'] = "E:\\Tushar File\\Tushar Programs\\Project Work\\DS Project\\static\\themes\\newupload"
+app.config['UPLOAD_FOLDER'] = "static/themes/newupload"
 
 @app.route("/uploader",methods=['GET','POST'])
 def uploader():                                       # This method is used to upload files 
