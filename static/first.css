@@ -812,7 +812,24 @@ header .icons .fa-twitter:hover{
     html{
         font-size: 50%;
     }
-
+    .home {
+        display: block;
+        overflow: hidden;
+    }
+    .home .swiper-pagination {
+        position: absolute;
+        text-align: center;
+        transition: .3s opacity;
+        transform: translate3d(0,0,0);
+        z-index: 10;
+        top: 80rem;
+    }
+    .dishes {
+        display: block;
+        background-color: darkgrey;
+        height: 70rem;
+        margin-top: 5rem;
+    }
     .dishes .box-container .box img{
         height:auto;
         width: 100%;
