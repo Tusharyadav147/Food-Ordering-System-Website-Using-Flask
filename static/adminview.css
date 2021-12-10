@@ -497,8 +497,27 @@ section{
         width: 100vw;
     }
 
-    .heading{
-        margin:0 3rem;
+    .heading {
+        text-align: center;
+        margin: 0rem;
+        font-size: 3rem;
+        padding: 0rem;
+        border-bottom: 0.1rem solid #fff4;
+        color: #fff;
+    }
+    .charts__left .apex1 {
+        width: 210px;
+        height: 250px;
+        overflow-x: scroll;
+        overflow-y: scroll;
+    }
+    .card {
+        background: #d1ecf1;
+        color: black;
+        text-align: center;
+        padding: 30px;
+        border-radius: 5px;
+        font-size: 7px;
     }
 
     .about .row .counter .box{
@@ -520,6 +539,20 @@ section{
 
     .contact .row form{
         margin:3rem 0;
+    }
+    .filter-date {
+        position: relative;
+        left: 0%;
+    }
+    .filter-date input {
+        left: 2%;
+        width: 36%;
+        height: 4rem;
+        border: white;
+        color: white;
+        background: rgb(207, 182, 182);
+        padding-left: 0.5rem;
+        border-radius: 1rem;
     }
 
  }
