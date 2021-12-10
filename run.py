@@ -64,14 +64,14 @@ class report:
         cursor.close()
         return r
 
-"""class image:
+class image:
     def file_save(self, f):
         filename = secure_filename(f.filename)
         f.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         return "img upload successfully"
 
     def upload(self):
-        path = 'E:\\Tushar File\\Tushar Programs\\Project Work\\DS Project\\static\\themes\\newupload\\'
+        path = '.\\static\\themes\\newupload\\'
         uploads = sorted(os.listdir(path), key=lambda x: os.path.getctime(path+x))        # Sorting as per image upload date and time
         #uploads = os.listdir('static/uploads')
         uploads = ['themes/newupload/' + file for file in uploads]
@@ -87,7 +87,7 @@ class report:
         connection.commit()
         cursor.close()
         print(r)
-        return r"""
+        return r
     
 """@app.route("/")
 def login():
@@ -99,7 +99,7 @@ def register():
 
 @app.route("/welcome")
 def welcome():
-    return render_template("first.html")
+    return render_template("first.html", value = image())
 
 @app.route("/additem")
 def additem():
@@ -145,7 +145,7 @@ def login():
             connection.commit()
             cursor.close()
             if count == 1:
-                return render_template('first.html')
+                return render_template('first.html', value = image())
             else:
                 Error = "Wrong Id & Password"
                 return render_template("login.html", error = Error, form = LoginForm())
@@ -366,9 +366,9 @@ def table():
         return render_template('adminview.html', value=report(), error = Error)
 
 
-#app.config['UPLOAD_FOLDER'] = "E:\\Tushar File\\Tushar Programs\\Project Work\\DS Project\\static\\themes\\newupload"
+app.config['UPLOAD_FOLDER'] = ".\\static\\themes\\newupload"
 
-"""@app.route("/uploader",methods=['GET','POST'])
+@app.route("/uploader",methods=['GET','POST'])
 def uploader():                                       # This method is used to upload files 
         if request.method == 'POST':
             cursor = connection.cursor()
@@ -383,7 +383,7 @@ def uploader():                                       # This method is used to u
             #f.save(secure_filename(f.filename))
             save = image()
             save.file_save(f)
-            return redirect("/additem")   """        # Redirect to route '/' for displaying images on fromt end
+            return redirect("/additem")           # Redirect to route '/' for displaying images on fromt end
 
 if __name__ == "__main__":
     app.run(debug = True)
