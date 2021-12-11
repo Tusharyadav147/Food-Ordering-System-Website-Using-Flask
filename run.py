@@ -6,6 +6,7 @@ from werkzeug.utils import secure_filename
 import os
 from datetime import date
 import sqlite3
+import random
 SECRET_KEY = os.urandom(32)
 
 app = Flask(__name__)
@@ -252,7 +253,7 @@ def register():
                         connection.commit()
                         cursor.close()
                         return render_template('register.html', form=Registration(), error=Error)
-                cursor.execute('INSERT INTO logindetails values(?,?,?,?,?,?,?)',(0,firstname, lastname , email, mobile_number, password, confirmpassword))
+                cursor.execute('INSERT INTO logindetails values(?,?,?,?,?,?,?)',(random.randint(1, 100001),firstname, lastname , email, mobile_number, password, confirmpassword))
                 connection.commit()
                 cursor.close()
                 return redirect('/')
