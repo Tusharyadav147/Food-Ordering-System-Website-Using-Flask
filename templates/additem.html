@@ -11,6 +11,15 @@
 </head>
 <body>
 	<div class="container">
+		{% if error != 0 %}
+            <div id="alert" class="alert show showAlert">
+                <span class="fas fa-check-circle" ></span>
+                <span class="msg">{{error}}</span>
+                <div class="close-btn" id= "close-btn">
+                    <span class="fas fa-times"></span>
+                </div>
+            </div>
+        {%endif%}
 		<div class="contact-box">
 			<div class="left"></div>
 			<div class="right">

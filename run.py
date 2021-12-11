@@ -89,14 +89,6 @@ class image:
         cursor.close()
         print(r)
         return r
-    
-"""@app.route("/")
-def login():
-    return render_template("login.html", form = LoginForm())"""
-
-"""@app.route('/register')
-def register():
-    return render_template('register.html', form = Registration())"""
 
 @app.route("/welcome")
 def welcome():
@@ -104,7 +96,7 @@ def welcome():
 
 @app.route("/additem")
 def additem():
-    return render_template("additem.html")
+    return render_template("additem.html", error = 0)
 
 @app.route("/admin")
 def admin():
@@ -170,7 +162,7 @@ def login():
             return render_template("login.html", error=0, form = LoginForm())
     except Exception as e:
         print(e)
-        Error = "Database is not connected"
+        Error = "Something Goes Worng! Try Again"
         return render_template("login.html", error=Error, form = LoginForm())
 
 @app.route("/adminlogin" , methods = ['POST', 'GET'])
@@ -217,7 +209,7 @@ def adminlogin():
             return render_template("login.html", error=0, form = LoginForm())
     except Exception as e:
         print(e)
-        Error = "Database is not connected"
+        Error = "Something Goes Worng! Try Again"
         return render_template("login.html", error=Error, form = LoginForm())
         
 #this is for registration page
@@ -273,7 +265,8 @@ def register():
                 cursor.execute('INSERT INTO logindetails values(?,?,?,?,?,?,?)',(random.randint(1, 100001),firstname, lastname , email, mobile_number, password, confirmpassword))
                 connection.commit()
                 cursor.close()
-                return redirect('/')
+                error = "Account Create Successfully"
+                return render_template("login.html", error=error, form = LoginForm())
             except Exception as e:
                 print(e)
                 Error = "Something Goes Wrong! Try Again "
@@ -281,7 +274,7 @@ def register():
         else:
             return render_template('register.html', form=Registration(), error=0)
     except:
-        Error = "DataBase is not connected"
+        Error = "Something Goes Worng! Try Again"
         return render_template('register.html', form=Registration(), error=Error)
 
 #this is for order
@@ -318,36 +311,27 @@ def orderresult():
         Error = "Something goes wrong Try Again"
         return render_template("order.html", error = Error)
 
-@app.route("/additemresult", methods = ["POST", "GET"])
-def additemresult():
-    if request.method == "POST":
-        value = request.form
-        print(value)
-        photo = value["file"]
-        food_name = value["name"]
-        price = value["price"]
-        add = additem()
-        add.insertBLOB(2,photo, food_name,price)
-        return redirect("/additem")
-    else:
-        print("some thing wrong")
 
 @app.route("/feedback", methods = ["POST", "GET"])
 def feedback():
-    cursor = connection.cursor()
-    if request.method == "POST":
-        print("hello")
-        value = request.form
-        print(value)
-        name = value["name"]
-        email = value["email"]
-        subject = value['subject']
-        message = value["message"]
-        cursor.execute('INSERT INTO feedback values(?,?,?,?,?)',(random.randint(1, 100001),name, email, subject, message))
-        connection.commit()
-        cursor.close()
-        error = "Thanks For Your FeedBack"
-        return render_template("first.html", value = image(), error = error)
+    try:
+        cursor = connection.cursor()
+        if request.method == "POST":
+            print("hello")
+            value = request.form
+            print(value)
+            name = value["name"]
+            email = value["email"]
+            subject = value['subject']
+            message = value["message"]
+            cursor.execute('INSERT INTO feedback values(?,?,?,?,?)',(random.randint(1, 100001),name, email, subject, message))
+            connection.commit()
+            cursor.close()
+            error = "Thanks For Your FeedBack"
+            return render_template("first.html", value = image(), error = error, admin = 2)
+    except:
+        error = "Sorry! Give FeedBack Again"
+        return render_template("first.html", value = image(), error = error, admin = 2)
 
 @app.route("/table", methods = ["POST", "GET"])
 def table():
@@ -386,7 +370,8 @@ def table():
 app.config['UPLOAD_FOLDER'] = "static/themes/newupload"
 
 @app.route("/uploader",methods=['GET','POST'])
-def uploader():                                       # This method is used to upload files 
+def uploader():      
+    try:                                 # This method is used to upload files 
         if request.method == 'POST':
             cursor = connection.cursor()
             f = request.files['file']
@@ -400,7 +385,11 @@ def uploader():                                       # This method is used to u
             #f.save(secure_filename(f.filename))
             save = image()
             save.file_save(f)
-            return redirect("/additem")           # Redirect to route '/' for displaying images on fromt end
+            error = "Food Uploaded Successfully"
+            return render_template("additem.html", error = 0)          # Redirect to route '/' for displaying images on fromt end
+    except:
+        error = "Something Is Wrong! Try Again"
+        return render_template("additem.html", error = 0)
 
 if __name__ == "__main__":
     app.run(debug = True)
