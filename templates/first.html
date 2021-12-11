@@ -1062,7 +1062,13 @@
     </section>
     <!-- footer section ends -->
 
-
+<script>
+    document.querySelector('#close-btn').onclick= () =>{
+  document.getElementById("alert").remove("show");
+  document.getElementById("alert").remove("showAlert");
+  document.getElementById("alert").toggle("hide");
+}
+</script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="./static/first.js"></script>
 </body>
