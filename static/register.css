@@ -186,7 +186,7 @@ body {
 @media (max-width:550px){
     .container{
         position: absolute;
-        height: 65%;
+        height: 410px;
     }
     .box{
       margin: 1rem 0rem;

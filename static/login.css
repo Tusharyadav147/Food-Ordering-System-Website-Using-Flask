@@ -220,8 +220,8 @@ body {
     .container{
         top:30%;
         left: 26%;
-        height: 40%;
-        width: 45%;
+        height: 300px;
+        width: 215px;
     }
     .btn1{
         margin-left: 14rem;
@@ -234,11 +234,11 @@ body {
     html{
         font-size: 55%;
     }
-    .container{
-        top:30%;
+    .container {
+        top: 30%;
         left: 16%;
-        height: 40%;
-        width: 55%;
+        height: 300px;
+        width: 215px;
     }
     .container a{
         font-size: 25px;

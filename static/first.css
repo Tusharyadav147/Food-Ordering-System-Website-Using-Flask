@@ -64,7 +64,7 @@ section{
 .btn:hover{
     background:var(--yellow);
 }
-.alert{
+header .alert{
     background: #ffdb9b;
     padding: 20px 40px;
     min-width: 420px;
@@ -77,14 +77,14 @@ section{
     opacity: 0;
     pointer-events: none;
   }
-  .alert.showAlert{
+header .alert.showAlert{
     opacity: 1;
     pointer-events: auto;
-  }
-  .alert.show{
+}
+header .alert.show{
     animation: show_slide 1s ease forwards;
-  }
-  @keyframes show_slide {
+}
+@keyframes show_slide {
     0%{
       transform: translateX(100%);
     }
@@ -97,11 +97,11 @@ section{
     100%{
       transform: translateX(-10px);
     }
-  }
-  .alert.hide{
+}
+header .alert.hide{
     display: none;
     animation: hide_slide 1s ease forwards;
-  }
+}
   @keyframes hide_slide {
     0%{
       transform: translateX(-10px);
@@ -115,21 +115,21 @@ section{
     100%{
       transform: translateX(100%);
     }
-  }
-  .alert .fa-check-circle{
+}
+header .alert .fa-check-circle{
     position: absolute;
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
     color: #ce8500;
     font-size: 30px;
-  }
-  .alert .msg{
+}
+header .alert .msg{
     padding: 0 20px;
     font-size: 18px;
     color: #ce8500;
-  }
-  .alert .close-btn{
+}
+header .alert .close-btn{
     position: absolute;
     right: 0px;
     top: 50%;
@@ -137,15 +137,15 @@ section{
     background: #ffd080;
     padding: 20px 18px;
     cursor: pointer;
-  }
-  .alert .close-btn:hover{
+}
+header .alert .close-btn:hover{
     background: #ffc766;
-  }
-  .alert .close-btn .fas{
+}
+header .alert .close-btn .fas{
     color: #ce8500;
     font-size: 22px;
     line-height: 40px;
-  }
+}
 /* navbar css */
 header{
     display: flex;
