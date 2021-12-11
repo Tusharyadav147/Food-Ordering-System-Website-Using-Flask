@@ -100,7 +100,7 @@ def register():
 
 @app.route("/welcome")
 def welcome():
-    return render_template("first.html", value = image())
+    return render_template("first.html", value = image(), error = 0)
 
 @app.route("/additem")
 def additem():
@@ -331,7 +331,8 @@ def feedback():
         cursor.execute('INSERT INTO feedback values(?,?,?,?,?)',(random.randint(1, 100001),name, email, subject, message))
         connection.commit()
         cursor.close()
-        return redirect('/welcome')
+        error = "Thanks For Your FeedBack"
+        return render_template("first.html", value = image(), error = error)
 
 @app.route("/table", methods = ["POST", "GET"])
 def table():
