@@ -116,7 +116,23 @@ def order():
 
 @app.route("/adminhome")
 def adminhome():
-    return render_template("adminhome.html", value = image(), error = 0)
+    value  = report()
+    amount = 0
+    order = 0
+    for i in value.orderdetails():
+        print(i)
+        amount = amount + i[7]
+        order = order + 1
+    print(amount, order)
+    login = 0
+    for i in value.logindetails():
+        login = login + 1
+    r = value.dailyreport()
+    today_amount = 0
+    for i in r:
+        today_amount = today_amount + i[7]
+    print(today_amount)
+    return render_template('adminview.html', value=report(), error = 0, total_amount = amount, total_order = order, total_login = login, today_amount= today_amount, admin = 1)
 
 #this is for userlogin
 @app.route("/" , methods = ['POST', 'GET'])
@@ -192,7 +208,7 @@ def adminlogin():
                 for i in r:
                     today_amount = today_amount + i[7]
                 print(today_amount)
-                return render_template('adminview.html', value=report(), error = 0, total_amount = amount, total_order = order, total_login = login, today_amount= today_amount)
+                return render_template('adminview.html', value=report(), error = 0, total_amount = amount, total_order = order, total_login = login, today_amount= today_amount, admin = 2)
             else:
                 Error = "Wrong Id & Password"
                 return render_template("login.html", error = Error, form = LoginForm())

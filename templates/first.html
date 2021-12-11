@@ -27,7 +27,12 @@
             Foody
         </a>
         <nav class="navbar">
+            {% if admin == 1 %}
+            <a href ="/adminhome" id="home-nav" class="active" href="">Admin Panel</a>
+            {%endif%}
+            {% if admin == 2 %}
             <a href ="#home" id="home-nav" class="active" href="">Home</a>
+            {%endif%}
             <a href="#dishes" id="dishes-nav">Dishes</a>
             <a href="#about" id="about-nav">About</a>
             <a href="#order" id="order-nav">Order</a>
