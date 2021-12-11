@@ -76,7 +76,6 @@ section{
     overflow: hidden;
     opacity: 0;
     pointer-events: none;
-    display: block;
   }
 .alert.showAlert{
     opacity: 1;
@@ -84,6 +83,7 @@ section{
 }
 .alert.show{
     animation: show_slide 1s ease forwards;
+    display: block;
 }
 @keyframes show_slide {
     0%{

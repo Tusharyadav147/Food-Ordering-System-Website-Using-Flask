@@ -323,5 +323,8 @@ document.querySelector('#other-btn').onclick= () =>{
 
 // hide notification
 document.querySelector('#close-btn').onclick= () =>{
-  document.getElementById("alert").style.display = "none";
+  document.querySelector('#alert').classList.toggle("hide");
+  document.querySelector('#alert').classList.remove("show");
+  document.querySelector('#alert').classList.remove("showAlert");
 }
+
