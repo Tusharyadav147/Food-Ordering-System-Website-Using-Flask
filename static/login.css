@@ -12,6 +12,7 @@ html{
 body {
     background: url("./themes/login1.jpeg") no-repeat center fixed;
     background-size: 100% 100%;
+    overflow: hidden;
 }
 .alert{
   background: #ffdb9b;
@@ -233,9 +234,6 @@ body {
 @media (max-width:550px){
     html{
         font-size: 55%;
-    }
-    body{
-      overflow: hidden;
     }
     .alert {
       background: #ffdb9b;
