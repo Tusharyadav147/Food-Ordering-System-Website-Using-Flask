@@ -146,7 +146,7 @@ def login():
             connection.commit()
             cursor.close()
             if count == 1:
-                return render_template('first.html', value = image())
+                return redirect("/welcome")
             else:
                 Error = "Wrong Id & Password"
                 return render_template("login.html", error = Error, form = LoginForm())

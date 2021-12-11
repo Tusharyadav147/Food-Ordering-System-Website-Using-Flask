@@ -116,7 +116,7 @@ section{
       transform: translateX(100%);
     }
   }
-  .alert .fa-exclamation-circle{
+  .alert .fa-check-circle{
     position: absolute;
     left: 20px;
     top: 50%;
