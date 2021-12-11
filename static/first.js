@@ -1,3 +1,8 @@
+document.querySelector('#close-btn').onclick= () =>{
+  document.getElementById("alert").remove("show");
+  document.getElementById("alert").remove("showAlert");
+  document.getElementById("alert").toggle("hide");
+}
 let menu = document.querySelector("#menu-bar");
 let navbar = document.querySelector('.navbar');
 
@@ -311,11 +316,6 @@ document.querySelector('#special-btn').onclick= () =>{
   document.getElementById("juices").style.display="none";
   document.getElementById("special").style.display="grid";
   document.getElementById("others").style.display="none";
-}
-document.querySelector('#close-btn').onclick= () =>{
-  document.getElementById("alert").remove("show");
-  document.getElementById("alert").remove("showAlert");
-  document.getElementById("alert").toggle("hide");
 }
 document.querySelector('#other-btn').onclick= () =>{
   document.getElementById("soft-drink").style.display="none";

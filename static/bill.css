@@ -201,12 +201,25 @@ button:hover{
 }
 
 @media (max-width:450px){
+  html{
+    font-size: 50%;
+  }
   .alert {
+    background: #ffdb9b;
+    padding: 20px 40px;
     min-width: 350px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    border-radius: 4px;
+    border-left: 8px solid #ffa502;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
   }
   .wrapper {
     overflow: scroll;
     width: 126vw;
-    height: 121vh;
+    height: 109vh;
   }
 }
