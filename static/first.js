@@ -144,12 +144,6 @@ var swiper = new Swiper(".review-slider", {
     }
   }
 
-document.querySelector('#close-btn').onclick= () =>{
-  document.getElementById("alert").remove("show");
-  document.getElementById("alert").remove("showAlert");
-  document.getElementById("alert").toggle("hide");
-}
-
 // give amount
 var dict = {
   "#" : 0,
@@ -328,7 +322,11 @@ document.querySelector('#other-btn').onclick= () =>{
   document.getElementById("others").style.display="grid";
 }
 
-
+document.querySelector('#close-btn').onclick= () =>{
+  document.getElementById("alert").remove("show");
+  document.getElementById("alert").remove("showAlert");
+  document.getElementById("alert").toggle("hide");
+}
 // select option show
 
 
