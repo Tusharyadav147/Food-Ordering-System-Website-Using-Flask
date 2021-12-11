@@ -58,7 +58,7 @@ class report:
         return result
     def dailyreport(self):
         today = date.today()
-        d1 = today.strftime("%Y/%m/%d")
+        d1 = today.strftime("%Y-%m-%d")
         cursor = connection.cursor()
         cursor.execute("select*from orderdetails where date(date_time)= '"+d1+"' ")
         r = cursor.fetchall()
