@@ -236,7 +236,6 @@ select5.onclick = () =>{
 }
 
 // order button working
-
 document.querySelector("#order-nav").onclick= () =>{
   document.getElementById("order").style.display="block";
   document.getElementById("home").style.display="none";
@@ -322,11 +321,11 @@ document.querySelector('#other-btn').onclick= () =>{
   document.getElementById("others").style.display="grid";
 }
 
+// hide notification
 document.querySelector('#close-btn').onclick= () =>{
   document.getElementById("alert").remove("show");
   document.getElementById("alert").remove("showAlert");
   document.getElementById("alert").toggle("hide");
 }
-// select option show
 
 
