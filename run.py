@@ -311,7 +311,7 @@ def orderresult():
             cursor.execute('INSERT INTO orderdetails values(?,?,?,?,?,?,?,?,?,?,?,?)',(random.randint(1, 100001),name, mob_number,email, food_type, food_name, quantity, amount, additional_food, address, city, datetime.now()))
             connection.commit()
             cursor.close()
-            return render_template("bill.html", value = [[name, email, food_name, int(quantity), int(amount), date_time, 10]])
+            return render_template("bill.html", value = [[name, email, food_name, int(quantity), int(amount), datetime.now(), 10]])
     except Exception as e:
         print(e)
         Error = "Something goes wrong Try Again"
