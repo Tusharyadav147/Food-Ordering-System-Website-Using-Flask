@@ -112,7 +112,7 @@ def admin():
 
 @app.route("/order")
 def order():
-    return render_template("order.html", error= 0)
+    return render_template("Order.html", error= 0)
 
 @app.route("/adminhome")
 def adminhome():
