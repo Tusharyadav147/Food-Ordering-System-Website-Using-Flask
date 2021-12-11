@@ -208,6 +208,7 @@ def adminlogin():
                 for i in r:
                     today_amount = today_amount + i[7]
                 print(today_amount)
+                print(value.dailyreport())
                 return render_template('adminview.html', value=report(), error = 0, total_amount = amount, total_order = order, total_login = login, today_amount= today_amount)
             else:
                 Error = "Wrong Id & Password"
