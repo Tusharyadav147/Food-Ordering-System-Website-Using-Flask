@@ -64,7 +64,7 @@ section{
 .btn:hover{
     background:var(--yellow);
 }
-header .alert{
+.alert{
     background: #ffdb9b;
     padding: 20px 40px;
     min-width: 420px;
@@ -77,11 +77,11 @@ header .alert{
     opacity: 0;
     pointer-events: none;
   }
-header .alert.showAlert{
+.alert.showAlert{
     opacity: 1;
     pointer-events: auto;
 }
-header .alert.show{
+.alert.show{
     animation: show_slide 1s ease forwards;
 }
 @keyframes show_slide {
@@ -98,7 +98,7 @@ header .alert.show{
       transform: translateX(-10px);
     }
 }
-header .alert.hide{
+.alert.hide{
     display: none;
     animation: hide_slide 1s ease forwards;
 }
@@ -116,7 +116,7 @@ header .alert.hide{
       transform: translateX(100%);
     }
 }
-header .alert .fa-check-circle{
+.alert .fa-check-circle{
     position: absolute;
     left: 20px;
     top: 50%;
@@ -124,12 +124,12 @@ header .alert .fa-check-circle{
     color: #ce8500;
     font-size: 30px;
 }
-header .alert .msg{
+.alert .msg{
     padding: 0 20px;
     font-size: 18px;
     color: #ce8500;
 }
-header .alert .close-btn{
+.alert .close-btn{
     position: absolute;
     right: 0px;
     top: 50%;
@@ -138,10 +138,10 @@ header .alert .close-btn{
     padding: 20px 18px;
     cursor: pointer;
 }
-header .alert .close-btn:hover{
+.alert .close-btn:hover{
     background: #ffc766;
 }
-header .alert .close-btn .fas{
+.alert .close-btn .fas{
     color: #ce8500;
     font-size: 22px;
     line-height: 40px;
@@ -897,6 +897,19 @@ header .icons .fa-twitter:hover{
     .home {
         display: block;
         overflow: hidden;
+    }
+    header .alert {
+        background: #ffdb9b;
+        padding: 20px 40px;
+        min-width: 350px;
+        position: absolute;
+        right: 0;
+        top: 10px;
+        border-radius: 4px;
+        border-left: 8px solid #ffa502;
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
     }
     .home .swiper-pagination {
         position: absolute;

@@ -200,3 +200,13 @@ button:hover{
   margin-bottom: 15px;
 }
 
+@media (max-width:450px){
+  .alert {
+    min-width: 350px;
+  }
+  .wrapper {
+    overflow: scroll;
+    width: 126vw;
+    height: 121vh;
+  }
+}

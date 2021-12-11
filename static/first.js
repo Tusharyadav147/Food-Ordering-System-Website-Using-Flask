@@ -143,6 +143,13 @@ var swiper = new Swiper(".review-slider", {
       document.getElementById("soft-drinks-type").style.display = "none";
     }
   }
+
+document.querySelector('#close-btn').onclick= () =>{
+  document.getElementById("alert").remove("show");
+  document.getElementById("alert").remove("showAlert");
+  document.getElementById("alert").toggle("hide");
+}
+
 // give amount
 var dict = {
   "#" : 0,
@@ -320,11 +327,7 @@ document.querySelector('#other-btn').onclick= () =>{
   document.getElementById("special").style.display="none";
   document.getElementById("others").style.display="grid";
 }
-document.querySelector('#close-btn').onclick= () =>{
-  document.getElementById("alert").remove("show");
-  document.getElementById("alert").remove("showAlert");
-  document.getElementById("alert").toggle("hide");
-}
+
 
 // select option show
 
