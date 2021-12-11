@@ -294,7 +294,7 @@ def orderresult():
             city = value["city"]
             date_time = value["datetime-local"]
             print(date_time)
-            cursor.execute('INSERT INTO orderdetails values(?,?,?,?,?,?,?,?,?,?,?,?)',(0,name, mob_number,email, food_type, food_name, quantity, amount, additional_food, address, city, date_time))
+            cursor.execute('INSERT INTO orderdetails values(?,?,?,?,?,?,?,?,?,?,?,?)',(random.randint(1, 100001),name, mob_number,email, food_type, food_name, quantity, amount, additional_food, address, city, date_time))
             connection.commit()
             cursor.close()
             return render_template("bill.html", value = [[name, email, food_name, int(quantity), int(amount), date_time, 10]])
@@ -328,7 +328,7 @@ def feedback():
         email = value["email"]
         subject = value['subject']
         message = value["message"]
-        cursor.execute('INSERT INTO feedback values(?,?,?,?,?)',(0,name, email, subject, message))
+        cursor.execute('INSERT INTO feedback values(?,?,?,?,?)',(random.randint(1, 100001),name, email, subject, message))
         connection.commit()
         cursor.close()
         return redirect('/welcome')
@@ -377,7 +377,7 @@ def uploader():                                       # This method is used to u
             price = request.form["price"]
             name = request.form["name"]
             message = "New Food"
-            cursor.execute('INSERT INTO foodprice values(?,?,?,?)',("",name, price, message))
+            cursor.execute('INSERT INTO foodprice values(?,?,?,?)',(random.randint(1, 100001),name, price, message))
             connection.commit()
             cursor.close()
             print(f.filename)
