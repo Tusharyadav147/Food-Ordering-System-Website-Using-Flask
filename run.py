@@ -4,7 +4,7 @@ from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Length, EqualTo, Email, NumberRange
 from werkzeug.utils import secure_filename
 import os
-from datetime import date
+from datetime import date, datetime
 import sqlite3
 import random
 SECRET_KEY = os.urandom(32)
@@ -308,9 +308,7 @@ def orderresult():
             additional_food = value["extra_food"]
             address = value["address"]
             city = value["city"]
-            date_time = value["datetime-local"]
-            print(date_time)
-            cursor.execute('INSERT INTO orderdetails values(?,?,?,?,?,?,?,?,?,?,?,?)',(random.randint(1, 100001),name, mob_number,email, food_type, food_name, quantity, amount, additional_food, address, city, date_time))
+            cursor.execute('INSERT INTO orderdetails values(?,?,?,?,?,?,?,?,?,?,?,?)',(random.randint(1, 100001),name, mob_number,email, food_type, food_name, quantity, amount, additional_food, address, city, datetime.now()))
             connection.commit()
             cursor.close()
             return render_template("bill.html", value = [[name, email, food_name, int(quantity), int(amount), date_time, 10]])
