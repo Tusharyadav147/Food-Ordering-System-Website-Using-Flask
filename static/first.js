@@ -327,5 +327,3 @@ document.querySelector('#close-btn').onclick= () =>{
   document.getElementById("alert").remove("showAlert");
   document.getElementById("alert").toggle("hide");
 }
-
-
