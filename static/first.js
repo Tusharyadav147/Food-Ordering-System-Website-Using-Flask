@@ -312,6 +312,11 @@ document.querySelector('#special-btn').onclick= () =>{
   document.getElementById("special").style.display="grid";
   document.getElementById("others").style.display="none";
 }
+document.querySelector('#close-btn').onclick= () =>{
+  document.getElementById("alert").remove("show");
+  document.getElementById("alert").remove("showAlert");
+  document.getElementById("alert").toggle("hide");
+}
 document.querySelector('#other-btn').onclick= () =>{
   document.getElementById("soft-drink").style.display="none";
   document.getElementById("pizza").style.display="none";
@@ -322,14 +327,3 @@ document.querySelector('#other-btn').onclick= () =>{
 }
 
 // hide notification
-document.querySelector('#close-btn').onclick= () =>{
-  document.getElementById("alert").remove("show");
-  document.getElementById("alert").remove("showAlert");
-  document.getElementById("alert").toggle("hide");
-}
-
-document.querySelector("#logout").onclick= () =>{
-  document.getElementById("alert").remove("show");
-  document.getElementById("alert").remove("showAlert");
-  document.getElementById("alert").toggle("hide");
-}
