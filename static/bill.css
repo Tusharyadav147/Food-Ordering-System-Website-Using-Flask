@@ -209,7 +209,8 @@ button:hover{
     padding: 20px 40px;
     min-width: 350px;
     position: absolute;
-    right: 0;
+    right: -12.5rem;
+    left: 13rem;
     top: 10px;
     border-radius: 4px;
     border-left: 8px solid #ffa502;
@@ -219,7 +220,14 @@ button:hover{
   }
   .wrapper {
     overflow: scroll;
-    width: 126vw;
-    height: 109vh;
+    width: 500px;
+    height: 700px;
+  }
+  .payment {
+    display: flex;
+    width: 470px;
+    height: 552px;
+    background-color: white;
+    box-shadow: 0px 0px 30px 15px rgb(0 0 0 / 20%);
   }
 }
