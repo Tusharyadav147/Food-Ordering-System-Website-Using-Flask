@@ -201,7 +201,7 @@ textarea{
 		height: 200px;
 	}
 }
-@media screen and (max-width :450px){
+@media screen and (max-width :550px){
 	.container {
 		position: relative;
 		width: 100%;

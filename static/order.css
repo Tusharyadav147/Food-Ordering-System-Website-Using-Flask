@@ -335,7 +335,7 @@ header .icons .fa-twitter:hover{
         font-size: 5rem;
     }
 }
-@media (max-width:450px){
+@media (max-width:550px){
 
     html{
         font-size: 50%;
