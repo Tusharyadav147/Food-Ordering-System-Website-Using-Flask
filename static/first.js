@@ -200,39 +200,29 @@ var select5 = document.getElementById("juice-type");
 var amount = document.getElementById("amount");
 var number = document.getElementById("number");
 select1.onclick = () =>{
-  number.onclick = () =>{
     num1 = dict[select1.options[select1.selectedIndex].value]
     num2 = number.value
     amount.value = num1 * num2
-  }
 }
 select2.onclick = () =>{
-  number.onclick = () =>{
     num1 = dict[select2.options[select2.selectedIndex].value]
     num2 = number.value
     amount.value = num1 * num2
-  }
 }
 select3.onclick = () =>{
-  number.onclick = () =>{
     num1 = dict[select3.options[select3.selectedIndex].value]
     num2 = number.value
     amount.value = num1 * num2
-  }
 }
 select4.onclick = () =>{
-  number.onclick = () =>{
     num1 = dict[select4.options[select4.selectedIndex].value]
     num2 = number.value
     amount.value = num1 * num2
-  }
 }
 select5.onclick = () =>{
-  number.onclick = () =>{
     num1 = dict[select5.options[select5.selectedIndex].value]
     num2 = number.value
     amount.value = num1 * num2
-  }
 }
 
 // order button working
