@@ -94,7 +94,7 @@ class image:
 def welcome():
     return render_template("first.html", value = image(), error = 0, admin = 1)
 
-@app.route("/welcome1")
+@app.route("/back")
 def welcome():
     return render_template("first.html", value = image(), error = 0, admin = 2)
 
