@@ -924,6 +924,8 @@ header .icons .fa-twitter:hover{
         background-color: darkgrey;
         height: 70rem;
         margin-top: 5rem;
+        overflow: scroll;
+        width: 738px;
     }
     .dishes .box-container .box img{
         height:auto;
