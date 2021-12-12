@@ -305,7 +305,7 @@ def orderresult():
     except Exception as e:
         print(e)
         Error = "Something goes wrong Try Again"
-        return render_template("order.html", error = Error)
+        return render_template("Order.html", error = Error)
 
 
 @app.route("/feedback", methods = ["POST", "GET"])
