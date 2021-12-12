@@ -98,10 +98,6 @@ def welcome():
 def additem():
     return render_template("additem.html", error = 0)
 
-@app.route("/admin")
-def admin():
-    return render_template("adminview.html", value = report(), error = 0)
-
 @app.route("/order")
 def order():
     return render_template("Order.html", error= 0)

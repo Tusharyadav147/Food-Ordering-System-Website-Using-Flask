@@ -5,6 +5,7 @@ body{
     padding: 0;
     margin: 0;
     font-family: "Roboto", sans-serif;
+    background-color: #ffa000;
 }
 .alert{
   background: #ffdb9b;
@@ -92,7 +93,6 @@ body{
 .wrapper{
     width: 100vw;
     height: 100vh;
-    background-color: #ffa000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -200,7 +200,7 @@ button:hover{
   margin-bottom: 15px;
 }
 
-@media (max-width:450px){
+@media (max-width:550px){
   html{
     font-size: 50%;
   }
@@ -219,14 +219,12 @@ button:hover{
     pointer-events: none;
   }
   .wrapper {
-    overflow: scroll;
-    width: 500px;
-    height: 840px;
+    overflow: hidden;
+    margin-top: 15%;
+    margin-left: 13%;
   }
   .payment {
     display: flex;
-    width: 470px;
-    height: 620px;
     background-color: white;
     box-shadow: 0px 0px 30px 15px rgb(0 0 0 / 20%);
   }
