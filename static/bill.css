@@ -225,7 +225,12 @@ button:hover{
   }
   .payment {
     display: flex;
+    width: 100%;
+    height: 69%;
     background-color: white;
     box-shadow: 0px 0px 30px 15px rgb(0 0 0 / 20%);
+  }
+  .payment_bill {
+    padding: 7px;
   }
 }
