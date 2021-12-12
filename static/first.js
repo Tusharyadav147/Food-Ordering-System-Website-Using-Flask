@@ -198,7 +198,7 @@ var select3 = document.getElementById("sweets-type");
 var select4 = document.getElementById("soft-drinks-type");
 var select5 = document.getElementById("juice-type");
 var amount = document.getElementById("amount");
-var number = document.getElementById("number");
+var number = document.getElementById("address");
 select1.onclick = () =>{
   number.onclick = () =>{
     num1 = dict[select1.options[select1.selectedIndex].value]
