@@ -924,6 +924,16 @@ header .icons .fa-twitter:hover{
         background-color: darkgrey;
         height: 70rem;
         margin-top: 5rem;
+        width: 100%;
+        overflow-x: scroll;
+    }
+    .main1 {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-gap: 2.3rem;
+        position: relative;
+        overflow: scroll;
+        width: 645px;
     }
     .dishes .box-container .box img{
         height:auto;
