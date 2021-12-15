@@ -376,7 +376,12 @@ header .icons .fa-twitter:hover{
     display: flex;
     flex-direction: column;
 }
-.list_item .active,
+.list_item #pizza-btn,
+.list_item #special-btn,
+.list_item #sweets-btn,
+.list_item #soft-drink-btn,
+.list_item #Juice-btn,
+.list_item #other-btn,
 .list_item .btn:hover{
     background-color:slategrey;
     color: black;

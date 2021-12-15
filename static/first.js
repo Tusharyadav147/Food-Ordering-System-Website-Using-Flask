@@ -278,12 +278,12 @@ document.querySelector('#pizza-btn').onclick= () =>{
   document.getElementById("others").style.display="none";
   document.getElementById("juices").style.display="none";
   document.getElementById("special").style.display="none";
-  document.getElementById("pizza-btn").classList.add('active');
-  document.getElementById("special-btn").classList.remove("active");
-  document.getElementById("sweets-btn").classList.remove("active");
-  document.getElementById("soft-drink-btn").classList.remove("active");
-  document.getElementById("Juices-btn").classList.remove("active");
-  document.getElementById("other-btn").classList.remove("active");
+  document.getElementById("pizza-btn").style.backgroundColor="slategrey"
+  document.getElementById("special-btn").style.backgroundColor="cornsilk"
+  document.getElementById("sweets-btn").style.backgroundColor="cornsilk"
+  document.getElementById("soft-drink-btn").style.backgroundColor="cornsilk"
+  document.getElementById("Juices-btn").style.backgroundColor="cornsilk"
+  document.getElementById("other-btn").style.backgroundColor="cornsilk"
   
 }
 document.querySelector('#soft-drink-btn').onclick= () =>{
@@ -293,12 +293,12 @@ document.querySelector('#soft-drink-btn').onclick= () =>{
   document.getElementById("others").style.display="none";
   document.getElementById("juices").style.display="none";
   document.getElementById("special").style.display="none";
-  document.getElementById("pizza-btn").classList.remove('active');
-  document.getElementById("special-btn").classList.remove("active");
-  document.getElementById("sweets-btn").classList.remove("active");
-  document.getElementById("soft-drink-btn").classList.toggle("active");
-  document.getElementById("Juices-btn").classList.remove("active");
-  document.getElementById("other-btn").classList.remove("active");
+  document.getElementById("pizza-btn").style.backgroundColor="cornsilk"
+  document.getElementById("special-btn").style.backgroundColor="cornsilk"
+  document.getElementById("sweets-btn").style.backgroundColor="cornsilk"
+  document.getElementById("soft-drink-btn").style.backgroundColor="slategrey"
+  document.getElementById("Juices-btn").style.backgroundColor="cornsilk"
+  document.getElementById("other-btn").style.backgroundColor="cornsilk"
 }
 document.querySelector('#sweets-btn').onclick= () =>{
   document.getElementById("soft-drink").style.display="none";
@@ -307,12 +307,12 @@ document.querySelector('#sweets-btn').onclick= () =>{
   document.getElementById("juices").style.display="none";
   document.getElementById("others").style.display="none";
   document.getElementById("special").style.display="none";
-  document.getElementById("pizza-btn").classList.remove('active');
-  document.getElementById("special-btn").classList.remove("active");
-  document.getElementById("sweets-btn").classList.toggle("active");
-  document.getElementById("soft-drink-btn").classList.remove("active");
-  document.getElementById("Juices-btn").classList.remove("active");
-  document.getElementById("other-btn").classList.remove("active");
+  document.getElementById("pizza-btn").style.backgroundColor="cornsilk"
+  document.getElementById("special-btn").style.backgroundColor="cornsilk"
+  document.getElementById("sweets-btn").style.backgroundColor="slategrey"
+  document.getElementById("soft-drink-btn").style.backgroundColor="cornsilk"
+  document.getElementById("Juices-btn").style.backgroundColor="cornsilk"
+  document.getElementById("other-btn").style.backgroundColor="cornsilk"
 }
 document.querySelector('#Juices-btn').onclick= () =>{
   document.getElementById("soft-drink").style.display="none";
@@ -321,12 +321,12 @@ document.querySelector('#Juices-btn').onclick= () =>{
   document.getElementById("juices").style.display="grid";
   document.getElementById("special").style.display="none";
   document.getElementById("others").style.display="none";
-  document.getElementById("pizza-btn").classList.remove('active');
-  document.getElementById("special-btn").classList.remove("active");
-  document.getElementById("sweets-btn").classList.remove("active");
-  document.getElementById("soft-drink-btn").classList.remove("active");
-  document.getElementById("Juices-btn").classList.toggle("active");
-  document.getElementById("other-btn").classList.remove("active");
+  document.getElementById("pizza-btn").style.backgroundColor="cornsilk"
+  document.getElementById("special-btn").style.backgroundColor="cornsilk"
+  document.getElementById("sweets-btn").style.backgroundColor="cornsilk"
+  document.getElementById("soft-drink-btn").style.backgroundColor="cornsilk"
+  document.getElementById("Juices-btn").style.backgroundColor="slategrey"
+  document.getElementById("other-btn").style.backgroundColor="cornsilk"
 }
 document.querySelector('#special-btn').onclick= () =>{
   document.getElementById("soft-drink").style.display="none";
@@ -335,12 +335,12 @@ document.querySelector('#special-btn').onclick= () =>{
   document.getElementById("juices").style.display="none";
   document.getElementById("special").style.display="grid";
   document.getElementById("others").style.display="none";
-  document.getElementById("pizza-btn").classList.remove('active');
-  document.getElementById("special-btn").classList.toggle("active");
-  document.getElementById("sweets-btn").classList.remove("active");
-  document.getElementById("soft-drink-btn").classList.remove("active");
-  document.getElementById("Juices-btn").classList.remove("active");
-  document.getElementById("other-btn").classList.remove("active");
+  document.getElementById("pizza-btn").style.backgroundColor="cornsilk"
+  document.getElementById("special-btn").style.backgroundColor="slategrey"
+  document.getElementById("sweets-btn").style.backgroundColor="cornsilk"
+  document.getElementById("soft-drink-btn").style.backgroundColor="cornsilk"
+  document.getElementById("Juices-btn").style.backgroundColor="cornsilk"
+  document.getElementById("other-btn").style.backgroundColor="cornsilk"
 }
 document.querySelector('#other-btn').onclick= () =>{
   document.getElementById("soft-drink").style.display="none";
@@ -349,12 +349,12 @@ document.querySelector('#other-btn').onclick= () =>{
   document.getElementById("juices").style.display="none";
   document.getElementById("special").style.display="none";
   document.getElementById("others").style.display="grid";
-  document.getElementById("pizza-btn").classList.remove('active');
-  document.getElementById("special-btn").classList.remove("active");
-  document.getElementById("sweets-btn").classList.remove("active");
-  document.getElementById("soft-drink-btn").classList.remove("active");
-  document.getElementById("Juices-btn").classList.remove("active");
-  document.getElementById("other-btn").classList.toggle("active");
+  document.getElementById("pizza-btn").style.backgroundColor="cornsilk"
+  document.getElementById("special-btn").style.backgroundColor="cornsilk"
+  document.getElementById("sweets-btn").style.backgroundColor="cornsilk"
+  document.getElementById("soft-drink-btn").style.backgroundColor="cornsilk"
+  document.getElementById("Juices-btn").style.backgroundColor="cornsilk"
+  document.getElementById("other-btn").style.backgroundColor="slategrey"
 }
 
 // hide notification
