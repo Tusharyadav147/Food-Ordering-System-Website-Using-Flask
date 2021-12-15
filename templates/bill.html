@@ -121,12 +121,15 @@
     </div>
     
 <script type = "text/javascript">
-    function print1(areaID){
-        var printContent = document.getElementById(areaID);
-        var WinPrint = window.open('', '', 'width=900,height=650');
-        WinPrint.document.write(printContent.innerHTML);
-        WinPrint.print();
-        WinPrint.close();
+    function print1(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+
+        window.print();
+
+        document.body.innerHTML = originalContents;
     }
     function fun3(){
         $('#alert').removeClass("show");
