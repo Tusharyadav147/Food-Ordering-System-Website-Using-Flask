@@ -278,7 +278,13 @@ document.querySelector('#pizza-btn').onclick= () =>{
   document.getElementById("others").style.display="none";
   document.getElementById("juices").style.display="none";
   document.getElementById("special").style.display="none";
-
+  document.getElementById("pizza-btn").style.backgroundColor="slategrey"
+  document.getElementById("special-btn").style.backgroundColor="cornsilk"
+  document.getElementById("sweets-btn").style.backgroundColor="cornsilk"
+  document.getElementById("soft-drink-btn").style.backgroundColor="cornsilk"
+  document.getElementById("juices-btn").style.backgroundColor="cornsilk"
+  document.getElementById("other-btn").style.backgroundColor="cornsilk"
+  
 }
 document.querySelector('#soft-drink-btn').onclick= () =>{
   document.getElementById("soft-drink").style.display="grid";
@@ -287,6 +293,7 @@ document.querySelector('#soft-drink-btn').onclick= () =>{
   document.getElementById("others").style.display="none";
   document.getElementById("juices").style.display="none";
   document.getElementById("special").style.display="none";
+  document.getElementById("special-btn").style.backgroundColor="slategrey"
 }
 document.querySelector('#sweets-btn').onclick= () =>{
   document.getElementById("soft-drink").style.display="none";
