@@ -17,7 +17,7 @@
             <span class="fas fa-times"></span>
          </div>
     </div>
-    <div id="wrapper" class="wrapper">
+    <div class="wrapper">
         <div class="payment">
             <div class="payment_product">
                 {% for i in value%}
@@ -28,7 +28,7 @@
                     </div>
                 </div>
             </div>
-            <div id="payment_bill" class="payment_bill">
+            <div class="payment_bill">
                 <h1>Foody</h1>
                 <h3>Receipt Summary</h3>
                 <ul>
@@ -112,27 +112,15 @@
                 <button type="Submit" onclick="fun2()">Order Now</button>
                 </div>
                 </div>
-                <button onclick="print1('wrapper')" class="print" id="print" >Print</button></a>
+                <button onclick="print1()" class="print" id="print" >Print</button></a>
                 <hr>
                 <a href="/back"><button type="button" >Go Home</button></a>
             </div>
         </div>
-        
     </div>
-    
 <script type = "text/javascript">
-    function print1(areaID){
-        var printContent = document.getElementById(areaID);
-        var WinPrint = window.open('', '', 'width=900,height=650');
-        WinPrint.document.write('<html><head>');
-        WinPrint.document.write('<link rel="stylesheet" href="./static/bill.css">')
-        WinPrint.document.write('</head><body">');
-        WinPrint.document.write(printContent.innerHTML);
-        WinPrint.document.write('</body></html>');
-        WinPrint.document.close();
-        WinPrint.focus();
-        WinPrint.print();
-        WinPrint.close();
+    function print1(){
+        window.print();
     }
     function fun3(){
         $('#alert').removeClass("show");
