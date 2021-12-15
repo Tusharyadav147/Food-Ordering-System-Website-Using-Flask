@@ -134,6 +134,9 @@ body{
 .right{
 	padding: 25px 40px;
 }
+.right input{
+  cursor: pointer;
+}
 
 h2{
 	position: relative;
