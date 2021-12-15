@@ -42,3 +42,9 @@ function fun0(){
     $("#about").css('display' , 'none');
     $("#home").css('display', 'block');
 }
+
+document.querySelector('#close-btn').onclick= () =>{
+  document.getElementById("alert").remove("show");
+  document.getElementById("alert").remove("showAlert");
+  document.getElementById("alert").toggle("hide");
+}
