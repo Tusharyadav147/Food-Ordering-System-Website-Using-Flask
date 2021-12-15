@@ -380,7 +380,15 @@ header .icons .fa-twitter:hover{
     background-color:slategrey;
     color: black;
 }
-
+.list_item #pizza-btn :hover,
+.list_item #special-btn :hover,
+.list_item #sweets-btn :hover,
+.list_item #soft-drink-btn :hover,
+.list_item #Juices-btn :hover,
+.list_item #other-btn :hover{
+    background-color:slategrey;
+    color: black;
+}
 .list_item .btn{
     position: relative;
     margin-left: 2rem;
