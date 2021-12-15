@@ -112,7 +112,7 @@
                 <button type="Submit" onclick="fun2()">Order Now</button>
                 </div>
                 </div>
-                <button onclick="print1(payment_bill)" class="print" id="print" >Print</button></a>
+                <button onclick="print1('payment_bill')" class="print" id="print" >Print</button></a>
                 <hr>
                 <a href="/back"><button type="button" >Go Home</button></a>
             </div>
@@ -121,15 +121,14 @@
     </div>
     
 <script type = "text/javascript">
-    function print1(divName) {
-        var printContents = document.getElementById(divName).innerHTML;
-        var originalContents = document.body.innerHTML;
-
-        document.body.innerHTML = printContents;
-
-        window.print();
-
-        document.body.innerHTML = originalContents;
+    function print1(areaID){
+        var printContent = document.getElementById(areaID);
+        var WinPrint = window.open('', '', 'width=900,height=650');
+        WinPrint.document.write(printContent.innerHTML);
+        WinPrint.document.close();
+        WinPrint.focus();
+        WinPrint.print();
+        WinPrint.close();
     }
     function fun3(){
         $('#alert').removeClass("show");
