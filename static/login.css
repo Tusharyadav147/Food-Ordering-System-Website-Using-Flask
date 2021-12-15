@@ -14,13 +14,17 @@ body {
     background-size: 100% 100%;
     overflow: hidden;
 }
-h1{
+h1 {
   display: inline-block;
-  color: black;
-  margin-left: 10rem;
-  margin-top: 2rem;
+  color: brown;
+  margin-left: 5%;
+  font-size: 46px;
+  margin-top: 5%;
   margin-bottom: 2rem;
   border-bottom: 3px solid purple;
+  background-color: #f1c6c6;
+  padding: 0.5rem 2rem;
+  border-radius: 2rem;
 }
 .alert{
   background: #ffdb9b;
