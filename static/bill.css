@@ -132,6 +132,12 @@ body{
     border-radius: 2px;
 }
 
+h2{
+    color: #ffa000;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+}
 h3{
     color: #ffa000;
     font-weight: 400;
