@@ -362,13 +362,45 @@ def table():
                     return render_template("table.html", value = r, amount = total_amount)
                 else:
                     Error = "No Data Of Such Date"
-                    return redirect("/adminhome", error = Error)
+                    value  = report()
+                    amount = 0
+                    order = 0
+                    for i in value.orderdetails():
+                        print(i)
+                        amount = amount + i[7]
+                        order = order + 1
+                    print(amount, order)
+                    login = 0
+                    for i in value.logindetails():
+                        login = login + 1
+                    r = value.dailyreport()
+                    today_amount = 0
+                    for i in r:
+                        today_amount = today_amount + i[7]
+                    print(today_amount)
+                    return render_template('adminview.html', value=report(), error = Error, total_amount = amount, total_order = order, total_login = login, today_amount= today_amount)
             except:
                 Error = "Invalid Date"
-                return redirect("/adminhome", error = Error)
+                value  = report()
+                amount = 0
+                order = 0
+                for i in value.orderdetails():
+                    print(i)
+                    amount = amount + i[7]
+                    order = order + 1
+                print(amount, order)
+                login = 0
+                for i in value.logindetails():
+                    login = login + 1
+                r = value.dailyreport()
+                today_amount = 0
+                for i in r:
+                    today_amount = today_amount + i[7]
+                print(today_amount)
+                return render_template('adminview.html', value=report(), error = Error, total_amount = amount, total_order = order, total_login = login, today_amount= today_amount)
     except:
         Error = "Something Goes Wrong"
-        return redirect("/adminhome", error = Error)
+        return render_template('adminview.html', value=report(), error = Error)
 
 
 app.config['UPLOAD_FOLDER'] = "static/themes/newupload"
