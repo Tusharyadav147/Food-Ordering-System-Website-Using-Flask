@@ -245,13 +245,13 @@ def register():
             mobile_number = form.mobile_number.data
             password = form.password.data
             confirmpassword = form.confirm_password.data
-            if len(re.findall(r'[7-9]{1}[0-9]{9}',mobile_number))==0:
-                Error = "Invalid Mobile Number"
-                return render_template('register.html', form=Registration(), error=Error)
             try:
                 cursor.execute("select*from logindetails where email= '" + email + "'")
                 r = cursor.fetchall()
                 count= len(r)
+                if len(re.findall(r'[7-9]{1}[0-9]{9}',mobile_number))==0:
+                    Error = "Invalid Mobile Number"
+                    return render_template('register.html', form=Registration(), error=Error)
                 if count == 1:
                     Error = "Email is already registered"
                     connection.commit()
