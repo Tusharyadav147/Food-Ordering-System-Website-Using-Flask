@@ -391,6 +391,9 @@ def uploader():
             save.file_save(f)
             error = "Food Uploaded Successfully"
             return render_template("additem.html", error = error)          # Redirect to route '/' for displaying images on fromt end
+        else:
+            error = "Something Is Wrong! Try Again"
+            return render_template("additem.html", error = 0)
     except:
         error = "Something Is Wrong! Try Again"
         return render_template("additem.html", error = 0)
