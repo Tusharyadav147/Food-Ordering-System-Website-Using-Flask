@@ -362,13 +362,13 @@ def table():
                     return render_template("table.html", value = r, amount = total_amount)
                 else:
                     Error = "No Data Of Such Date"
-                    return render_template('adminview.html', value=report(), error = Error)
+                    return redirect("/adminhome", error = Error)
             except:
                 Error = "Invalid Date"
-                return render_template('adminview.html', value=report(), error = Error)
+                return redirect("/adminhome", error = Error)
     except:
         Error = "Something Goes Wrong"
-        return render_template('adminview.html', value=report(), error = Error)
+        return redirect("/adminhome", error = Error)
 
 
 app.config['UPLOAD_FOLDER'] = "static/themes/newupload"
