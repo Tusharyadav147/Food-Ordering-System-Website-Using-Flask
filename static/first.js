@@ -282,7 +282,7 @@ document.querySelector('#pizza-btn').onclick= () =>{
   document.getElementById("special-btn").style.backgroundColor="cornsilk"
   document.getElementById("sweets-btn").style.backgroundColor="cornsilk"
   document.getElementById("soft-drink-btn").style.backgroundColor="cornsilk"
-  document.getElementById("juices-btn").style.backgroundColor="cornsilk"
+  document.getElementById("Juices-btn").style.backgroundColor="cornsilk"
   document.getElementById("other-btn").style.backgroundColor="cornsilk"
   
 }
@@ -297,7 +297,7 @@ document.querySelector('#soft-drink-btn').onclick= () =>{
   document.getElementById("special-btn").style.backgroundColor="cornsilk"
   document.getElementById("sweets-btn").style.backgroundColor="cornsilk"
   document.getElementById("soft-drink-btn").style.backgroundColor="slategrey"
-  document.getElementById("juices-btn").style.backgroundColor="cornsilk"
+  document.getElementById("Juices-btn").style.backgroundColor="cornsilk"
   document.getElementById("other-btn").style.backgroundColor="cornsilk"
 }
 document.querySelector('#sweets-btn').onclick= () =>{
@@ -311,7 +311,7 @@ document.querySelector('#sweets-btn').onclick= () =>{
   document.getElementById("special-btn").style.backgroundColor="cornsilk"
   document.getElementById("sweets-btn").style.backgroundColor="slategrey"
   document.getElementById("soft-drink-btn").style.backgroundColor="cornsilk"
-  document.getElementById("juices-btn").style.backgroundColor="cornsilk"
+  document.getElementById("Juices-btn").style.backgroundColor="cornsilk"
   document.getElementById("other-btn").style.backgroundColor="cornsilk"
 }
 document.querySelector('#Juices-btn').onclick= () =>{
@@ -325,7 +325,7 @@ document.querySelector('#Juices-btn').onclick= () =>{
   document.getElementById("special-btn").style.backgroundColor="cornsilk"
   document.getElementById("sweets-btn").style.backgroundColor="cornsilk"
   document.getElementById("soft-drink-btn").style.backgroundColor="cornsilk"
-  document.getElementById("juices-btn").style.backgroundColor="slategrey"
+  document.getElementById("Juices-btn").style.backgroundColor="slategrey"
   document.getElementById("other-btn").style.backgroundColor="cornsilk"
 }
 document.querySelector('#special-btn').onclick= () =>{
@@ -339,7 +339,7 @@ document.querySelector('#special-btn').onclick= () =>{
   document.getElementById("special-btn").style.backgroundColor="slategrey"
   document.getElementById("sweets-btn").style.backgroundColor="cornsilk"
   document.getElementById("soft-drink-btn").style.backgroundColor="cornsilk"
-  document.getElementById("juices-btn").style.backgroundColor="cornsilk"
+  document.getElementById("Juices-btn").style.backgroundColor="cornsilk"
   document.getElementById("other-btn").style.backgroundColor="cornsilk"
 }
 document.querySelector('#other-btn').onclick= () =>{
@@ -353,7 +353,7 @@ document.querySelector('#other-btn').onclick= () =>{
   document.getElementById("special-btn").style.backgroundColor="cornsilk"
   document.getElementById("sweets-btn").style.backgroundColor="cornsilk"
   document.getElementById("soft-drink-btn").style.backgroundColor="cornsilk"
-  document.getElementById("juices-btn").style.backgroundColor="cornsilk"
+  document.getElementById("Juices-btn").style.backgroundColor="cornsilk"
   document.getElementById("other-btn").style.backgroundColor="slategrey"
 }
 
