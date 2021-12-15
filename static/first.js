@@ -278,7 +278,7 @@ document.querySelector('#pizza-btn').onclick= () =>{
   document.getElementById("others").style.display="none";
   document.getElementById("juices").style.display="none";
   document.getElementById("special").style.display="none";
-  document.getElementById("pizza-btn").classList.toggle('active');
+  document.getElementById("pizza-btn").classList.add('active');
   document.getElementById("special-btn").classList.remove("active");
   document.getElementById("sweets-btn").classList.remove("active");
   document.getElementById("soft-drink-btn").classList.remove("active");
