@@ -393,10 +393,10 @@ def uploader():
             return render_template("additem.html", error = error)          # Redirect to route '/' for displaying images on fromt end
         else:
             error = "Something Is Wrong! Try Again"
-            return render_template("additem.html", error = 0)
+            return render_template("additem.html", error = error)
     except:
         error = "Something Is Wrong! Try Again"
-        return render_template("additem.html", error = 0)
+        return render_template("additem.html", error = error)
 
 if __name__ == "__main__":
     app.run(debug = True)
