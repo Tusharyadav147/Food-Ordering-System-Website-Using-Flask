@@ -61,7 +61,7 @@ body{
 .alert.show{
     animation: show_slide 1s ease forwards;
   }
-  @keyframes show_slide {
+@keyframes show_slide {
     0%{
       transform: translateX(100%);
     }
@@ -75,10 +75,10 @@ body{
       transform: translateX(-10px);
     }
   }
-  .alert.hide{
+.alert.hide{
     display: none;
     animation: hide_slide 1s ease forwards;
-  }
+}
   @keyframes hide_slide {
     0%{
       transform: translateX(-10px);
