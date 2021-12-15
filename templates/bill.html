@@ -123,7 +123,7 @@
 <script type = "text/javascript">
     function print1(areaID){
         var printContent = document.getElementById(areaID);
-        var WinPrint = window.open('', '', 'width=900,height=650');
+        var WinPrint = window.open('<link rel="stylesheet" href="./static/bill.css">', '', 'width=900,height=650');
         WinPrint.document.write(printContent.innerHTML);
         WinPrint.document.close();
         WinPrint.focus();
