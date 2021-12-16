@@ -337,6 +337,39 @@ def feedback():
         error = "Sorry! Give FeedBack Again"
         return render_template("first.html", value = image(), error = error, admin = 2)
 
+@app.route("/delete")
+def delete():
+    try:
+        cursor = connection.cursor()
+        if request.method == "POST":
+            value = request.form
+            print(value)
+            search = value["ID"]
+            try:
+                cursor.execute("delete from logindetails where SNo = '"+search+"' ")
+                connection.commit()
+                cursor.close()
+            except:
+                Error = "No Details Found"
+                value  = report()
+                amount = 0
+                order = 0
+                for i in value.orderdetails():
+                    print(i)
+                    amount = amount + i[7]
+                    order = order + 1
+                print(amount, order)
+                login = 0
+                for i in value.logindetails():
+                    login = login + 1
+                r = value.dailyreport()
+                today_amount = 0
+                for i in r:
+                    today_amount = today_amount + i[7]
+                print(today_amount)
+                return render_template('adminview.html', value=report(), error = Error, total_amount = amount, total_order = order, total_login = login, today_amount= today_amount)
+    except:
+        redirect("/adminhome"
 @app.route("/table", methods = ["POST", "GET"])
 def table():
     try:
