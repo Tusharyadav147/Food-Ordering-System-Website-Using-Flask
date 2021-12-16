@@ -344,8 +344,8 @@ def delete():
         if request.method == "POST":
             value = request.form
             print(value)
-            search = int(value["ID"])
-            cursor.execute("select*from logindetails where SNo= '"+search+"' ")
+            search = value["ID"]
+            cursor.execute("select*from logindetails where SNo= '+search+' ")
             r = cursor.fetchall()
             connection.commit()
             cursor.close()
