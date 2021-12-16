@@ -337,7 +337,7 @@ def feedback():
         error = "Sorry! Give FeedBack Again"
         return render_template("first.html", value = image(), error = error, admin = 2)
 
-@app.route("/delete")
+@app.route("/delete", methods = ["POST", "GET"])
 def delete():
     try:
         cursor = connection.cursor()
