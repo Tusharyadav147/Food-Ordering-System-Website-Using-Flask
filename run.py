@@ -369,7 +369,7 @@ def delete():
                 print(today_amount)
                 return render_template('adminview.html', value=report(), error = Error, total_amount = amount, total_order = order, total_login = login, today_amount= today_amount)
     except:
-        redirect("/adminhome"
+        return redirect("/adminhome")
 @app.route("/table", methods = ["POST", "GET"])
 def table():
     try:
