@@ -349,6 +349,24 @@ def delete():
                 cursor.execute("delete from logindetails where SNo = '"+search+"' ")
                 connection.commit()
                 cursor.close()
+                Error = "Data Deleted Successfully"
+                value  = report()
+                amount = 0
+                order = 0
+                for i in value.orderdetails():
+                    print(i)
+                    amount = amount + i[7]
+                    order = order + 1
+                print(amount, order)
+                login = 0
+                for i in value.logindetails():
+                    login = login + 1
+                r = value.dailyreport()
+                today_amount = 0
+                for i in r:
+                    today_amount = today_amount + i[7]
+                print(today_amount)
+                return render_template('adminview.html', value=report(), error = Error, total_amount = amount, total_order = order, total_login = login, today_amount= today_amount)
             except:
                 Error = "No Details Found"
                 value  = report()
