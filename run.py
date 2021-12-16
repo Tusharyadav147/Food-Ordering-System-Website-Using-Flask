@@ -345,7 +345,12 @@ def delete():
             value = request.form
             print(value)
             search = value["ID"]
-            try:
+            cursor.execute("select*from logindetails where SNo= '" + search + "'")
+            r = cursor.fetchall()
+            connection.commit()
+            cursor.close()
+            count= len(r)
+            if count == 1:
                 cursor.execute("delete from logindetails where SNo = '"+search+"' ")
                 connection.commit()
                 cursor.close()
@@ -367,7 +372,7 @@ def delete():
                     today_amount = today_amount + i[7]
                 print(today_amount)
                 return render_template('adminview.html', value=report(), error = Error, total_amount = amount, total_order = order, total_login = login, today_amount= today_amount)
-            except:
+            else:
                 Error = "No Details Found"
                 value  = report()
                 amount = 0
