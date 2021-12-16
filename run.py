@@ -345,7 +345,7 @@ def delete():
             value = request.form
             print(value)
             search = int(value["ID"])
-            cursor.execute("select*from logindetails where SNo= '" +search+ "'")
+            cursor.execute("select*from logindetails where SNo= '" +search+ "' ")
             r = cursor.fetchall()
             connection.commit()
             cursor.close()
@@ -392,7 +392,8 @@ def delete():
                     today_amount = today_amount + i[7]
                 print(today_amount)
                 return render_template('adminview.html', value=report(), error = Error, total_amount = amount, total_order = order, total_login = login, today_amount= today_amount)
-    except:
+    except Exception as e:
+        print(e)
         return redirect("/adminhome")
 @app.route("/table", methods = ["POST", "GET"])
 def table():
