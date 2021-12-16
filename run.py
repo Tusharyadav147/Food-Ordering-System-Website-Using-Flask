@@ -352,6 +352,7 @@ def delete():
             count= len(r)
             print(r)
             if count == 1:
+                cursor = connection.cursor()
                 cursor.execute("delete from logindetails where SNo = '"+search+"' ")
                 connection.commit()
                 cursor.close()
