@@ -362,7 +362,7 @@ section{
 }
 
 .about .row .counter .box{
-    width:20rem;
+    width:40rem;
     background:#222;
     text-align: center;
     padding: 2rem;
@@ -604,6 +604,9 @@ section{
     .about .row .counter .box{
         width: 100%;
     }
+    .about .row .counter .box{
+      width:20rem;
+  }
     .table{
         width: 1145px;
         height: 650px;

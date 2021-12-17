@@ -807,7 +807,7 @@ header .icons .fa-twitter:hover{
 }
 .footer .box-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: 25% 25% 25% 25%;
     gap:1.5rem;
 }
 
@@ -938,5 +938,10 @@ header .icons .fa-twitter:hover{
     .dishes .box-container .box img{
         height:auto;
         width: 100%;
+    }
+    .footer .box-container{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap:1.5rem;
     }
 }
