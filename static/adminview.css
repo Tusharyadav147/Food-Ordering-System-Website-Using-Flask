@@ -604,9 +604,6 @@ section{
     .about .row .counter .box{
         width: 100%;
     }
-    .about .row .counter .box{
-      width:20rem;
-  }
     .table{
         width: 1145px;
         height: 650px;
